@@ -1488,6 +1488,7 @@ public class PortrateUIManager
                 mentorTrainingView.gameObject.SetActive(true);
                 break;
             case Const.View.Close:
+                openButton.gameObject.SetActive(true);
                 break;
         }
     }
@@ -1651,6 +1652,12 @@ public class PortrateUIManager
         mentorPurchaseView.SetCells();
         mentorTrainingView.SetCells();
         
+
+        openButton.onClick.AddListener(() => {
+        openButton.gameObject.SetActive(false);
+        ChangeView(lastView);
+        });
+
         UpdateView();
         
         workButton.onClick.AddListener(() =>
@@ -1695,6 +1702,7 @@ public class PortrateUIManager
                 mentorTrainingView.gameObject.SetActive(true);
                 break;
             case Const.View.Close:
+                openButton.gameObject.SetActive(true);
                 break;
         }
     }
