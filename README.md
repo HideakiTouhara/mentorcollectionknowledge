@@ -983,12 +983,6 @@ public class PortrateUIManager
             Time.deltaTime * easing) - mainPanel.position;
         if (v.magnitude > maxSpeed) v = v.normalized * maxSpeed;
         mainPanel.position += v;
-
-        // rotation
-        mainPanel.rotation = Quaternion.Lerp(
-            transform.rotation,
-            target.rotation,
-            Time.deltaTime * easing);
         
         if (isMoving) {
             float distance = Vector3.Distance(mainPanel.position, target.position);
@@ -1515,12 +1509,6 @@ public class PortrateUIManager
             Time.deltaTime * easing) - mainPanel.position;
         if (v.magnitude > maxSpeed) v = v.normalized * maxSpeed;
         mainPanel.position += v;
-
-        // rotation
-        mainPanel.rotation = Quaternion.Lerp(
-            transform.rotation,
-            target.rotation,
-            Time.deltaTime * easing);
         
         if (isMoving) {
             float distance = Vector3.Distance(mainPanel.position, target.position);
@@ -1729,12 +1717,6 @@ public class PortrateUIManager
             Time.deltaTime * easing) - mainPanel.position;
         if (v.magnitude > maxSpeed) v = v.normalized * maxSpeed;
         mainPanel.position += v;
-
-        // rotation
-        mainPanel.rotation = Quaternion.Lerp(
-            transform.rotation,
-            target.rotation,
-            Time.deltaTime * easing);
         
         if (isMoving) {
             float distance = Vector3.Distance(mainPanel.position, target.position);
@@ -3100,12 +3082,6 @@ public class MainCameraController
 			Time.deltaTime * easing) - mainCamera.position;
 		if (v.magnitude > maxSpeed) v = v.normalized * maxSpeed;
 		mainCamera.position += v;
-
-		// rotation
-		mainCamera.rotation = Quaternion.Lerp(
-			mainCamera.rotation,
-			target.rotation,
-			Time.deltaTime * easing);
 
 		float distance = Vector3.Distance(mainCamera.position, target.position);
 		if (stopDistance > distance) 
