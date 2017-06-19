@@ -3080,6 +3080,13 @@ public class MainCameraController
 			mainCamera.position, 
 			target.position, 
 			Time.deltaTime * easing) - mainCamera.position;
+			
+		// rotation
+		mainCamera.rotation = Quaternion.Lerp(
+			mainCamera.rotation,
+			target.rotation,
+			Time.deltaTime * easing);
+
 		if (v.magnitude > maxSpeed) v = v.normalized * maxSpeed;
 		mainCamera.position += v;
 
